@@ -1,0 +1,77 @@
+
+body {
+    font-size: 100%;
+    font-size: 0.875em; /* 14/16=.875=14 pts */
+}
+
+p {
+    font-family: "Helvetica", courier, monospace;
+    font-weight: normal;
+    font-size: 2vw;
+    line-height: 130%;
+    text-align: left;
+    color: blue;
+   
+}
+
+h1 {
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-weight: 700;
+    text-transform: uppercase;
+   /* text-decoration: underline */
+    letter-spacing: .25em;
+    color: black;
+}
+
+.wrapper {
+    background-color: white; 
+    margin: 4% auto;
+    padding: 20px;
+    width: 60%;
+}
+
+.paragraph{
+    margin: 0;
+}
+
+.key-word {
+    font-family: 'ZCOOL KuaiLe', cursive;
+    font-weight: 700;
+    text-transform: uppercase;
+   /* text-decoration: underline */
+    letter-spacing: .25em;
+    color: black;
+}
+
+
+
+#box-model {
+    background-color: white;
+}
+
+#inline-block {
+    background-color: white;
+    display: block;
+    float: left;
+   /* padding: 2%;
+    border: 5%;
+    border-style: solid;
+    border-width: 5%;
+    border-color: cyan magenta yellow black;
+    margin: 10%; */
+}
+
+#positioning {
+    background-color: white;
+}
+
+
+#floats {
+    background-color: white;
+}
+
+
+#fixed-fluid {
+    background-color: white;
+    
+}
