@@ -34,14 +34,12 @@
   <h1>DESIGNER AS ILLUSTRATOR</h1>
 </div>
 
-        <!--
+        
      <div id="mydiv">
-  <div id="mydivheader">Click here to move</div>
-  <p>Move</p>
-  <p>this</p>
-  <p>DIV</p>
+  <div id="mydivheader"><a id='golink' href="https://2x4.org/ideas/2009/fuck-content/" target="_blank"><img src="images/fuckcontent.png" alt="fuck all"></a></div>
+
 </div>
-    -->
+ 
 <div class="topnav">
  <Marquee behavior=scroll direction="left" scrollamount="20"><p>THERE'S A WEIRD WALL BETWEEN ART AND DESIGN FOR ME AND I'VE BEEN CHIPPING AWAY AT IT FOR A HOT MINUTE NOW AND MAYBE I'M MAKING PROGRESS TOWARDS TEARING IT DOWN BUT ALSO MAYBE IT'S OKAY TO HAVE THAT WALL UP SOMETIMES</p></Marquee>
 </div>
@@ -129,6 +127,16 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+      
+      
+      jQuery(function($) {
+    $('#golink').click(function() {
+        return false;
+    }).dblclick(function() {
+        window.location = this.href;
+        return false;
+    });
+});
 </script>  
     
 </body>

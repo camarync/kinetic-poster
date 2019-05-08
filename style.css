@@ -68,6 +68,21 @@ body {
     }
 }
 
+@keyframes nudge4 {
+    0%,
+    100% {
+        transform: translate(100px, 700px);
+    }
+
+    50% {
+        transform: translate(600px, 150px);
+    }
+
+    80% {
+        transform: translate(200px, 700px);
+    }
+}
+
 .newguy {
     width: 10%;
     animation: nudge 20s linear infinite alternate;
@@ -79,7 +94,7 @@ body {
 
 .newintown {
     width: 10%;
-    animation: nudge2 30s linear infinite alternate;
+    animation: nudge4 30s linear infinite alternate;
     border-radius: 100%;
     z-index: 103;
   
@@ -258,21 +273,20 @@ img {
 
 }
 
-/*
+
 #mydiv {
   position: absolute;
-  z-index: 9;
-  background-color: #f1f1f1;
+  z-index: 110;
   text-align: center;
-  border: 1px solid #d3d3d3;
+ width: 20%;
+display: block;
+    margin: 0% auto;
 }
 
 #mydivheader {
   padding: 10px;
   cursor: move;
-  z-index: 10;
-  background-color: #2196F3;
-  color: #fff;
+  z-index: 110;
+color: #fff;
 }
-*/
-*/
+
