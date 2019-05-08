@@ -29,14 +29,21 @@
     <div class="rat"><img src="images/rat.png" alt="my thoughts"></div>  
     <div class="thing"><img src="images/thing.png" alt="my thoughts"></div>
 
+
 <div class="header">
   <h1>DESIGNER AS ILLUSTRATOR</h1>
 </div>
 
-     
-        
+        <!--
+     <div id="mydiv">
+  <div id="mydivheader">Click here to move</div>
+  <p>Move</p>
+  <p>this</p>
+  <p>DIV</p>
+</div>
+    -->
 <div class="topnav">
- <Marquee><p>I DON'T KNOW HOW TO MARRY MY INTERESTS I REALLY LIKE DESIGN I REALLY LIKE ILLUSTRATION I KNOW THEY CROSSOVER IN CERTAIN ASPECTS BUT IT'S NEVER REALLY TALKED ABOUT IN ANY OF MY GRAPHIC DESIGN CLASSES WHY DO I HAVE TO TAKE A PAINTING AND DRAWING CLASS TO GET CLOSE TO ILLUSTRATION MAYBE IM DUMB MAYBE IM OVERTHINKING THIS MAYBE THE ANSWER IS SIMPLE</p></Marquee>
+ <Marquee behavior=scroll direction="left" scrollamount="20"><p>THERE'S A WEIRD WALL BETWEEN ART AND DESIGN FOR ME AND I'VE BEEN CHIPPING AWAY AT IT FOR A HOT MINUTE NOW AND MAYBE I'M MAKING PROGRESS TOWARDS TEARING IT DOWN BUT ALSO MAYBE IT'S OKAY TO HAVE THAT WALL UP SOMETIMES</p></Marquee>
 </div>
 
 <div class="row">
@@ -48,7 +55,7 @@
 <br>
 <p class="paragraph" id="box-model"><span class="key-word"></span> Scrolling through twitter is funny because artists are constanly complaining about relatives asking them to design business cards and logos. The general public often fails to differentiate between artist and designer. So what if you're both? That's how I consider myself. It says Designer + Illustrator right on my resume. Yet for some reason it's invoked some bizarre, artistic identity crisis. My design work informs my illustration work and vice versa, but at the same time it feels like wearing two completely different hats.</p>
 <br>
-<p class="paragraph" id="box-model"><span class="key-word"></span>Of course design incorporates illustration. Or rather, it can. However there are so many different "types" and "styles" and purposes for illustration. There's design as illustration, and illustration as design.</p>
+<p class="paragraph" id="box-model"><span class="key-word"></span>Of course design incorporates illustration. Or rather, it can. However there are so many different "types" and "styles" and purposes for illustration. There's design as illustration, and illustration as design. I think there's a lot more interpretations of what illustration actually is in terms of design as well. Someone may craft something without doing any actual drawing and call it illustration. There are plenty of vector graphics we could call illustration even though they were made by clicking and dragging with a mouse. Ask a comic artist what they consider illustration to be and they'll think more along the lines of drawing by hand - circles back around to the whole children's book piece. It's interesting that Michael points out illustrators use the book format in "inventive" ways in order to produce "serious work." What classifies something as non-inventive? And is something non-inventive therefore not serious? Is illustration not to be considered design unless it is inventive? It sounds like I'm trying to hit the word count for an essya, but I'm just trying to make sense of it all. Where does a graphic novel artist stand in the world of design? Graphic novels as a medium are certainly considered low-brow in a majority of cases when compared to other forms of design. </p>
 <br>
   </div>
   
@@ -78,6 +85,52 @@
     </div>
     
   -->
+  <script>
+//Make the DIV element draggagle:
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    /* if present, the header is where you move the DIV from:*/
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    /* otherwise, move the DIV from anywhere inside the DIV:*/
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>  
+    
 </body>
 
 
